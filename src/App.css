@@ -5,20 +5,26 @@
 }
 
 button {
+  cursor: pointer;
   outline: none;
   border: none;
-  box-shadow: 2px 0 2px currentColor;
   border-radius: 4px;
   min-height: 32px;
   min-width: 80px;
   padding: 4px 8px;
 }
 
-button:hover {
+button:hover,
+button:disabled {
   opacity: 0.85;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 input[type="checkbox"] {
+  cursor: pointer;
   width: 24px;
   height: 24px;
   box-shadow: none;
@@ -98,6 +104,9 @@ input:focus {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 .Todo__action, .Todo__delete {
@@ -121,5 +130,21 @@ input:focus {
   margin-right: 8px;
 }
 
-.Action__btn {
+.list__heading {
+  margin-top: 1.5rem;
+}
+
+.clear__btn {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.Action__btn:focus,
+.Action__btn:hover,
+.Action__btn:active,
+.Action__btn.active {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
 }
